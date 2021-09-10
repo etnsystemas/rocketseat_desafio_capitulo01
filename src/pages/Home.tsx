@@ -76,20 +76,18 @@ export function Home() {
 
   function handleRemoveTask(id: number) {
 
-    // Alert.alert('Remover item', 'Tem certeza que você deseja remover este item?',[
-    //   {
-    //     text: 'Sim',
-    //     onPress: () => setTasks((oldState) => oldState.filter((task) => task.id !== id))
-    //   },
-    //   {
-    //     text: 'Não',
-    //     style: 'cancel'
-    //   }
-    // ])
+    Alert.alert('Remover item', 'Tem certeza que você deseja remover este item?',[
+      {
+        text: 'Sim',
+        onPress: () => setTasks((oldState) => oldState.filter((task) => task.id !== id))
+      },
+      {
+        text: 'Não',
+        style: 'cancel'
+      }
+    ])
 
     //TODO - remove task from state
-
-    setTasks((oldState) => oldState.filter((task) => task.id !== id))
     
   }
 
