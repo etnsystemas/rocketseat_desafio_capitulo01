@@ -28,7 +28,7 @@ export function Home() {
 
   function handleAddTask(newTaskTitle: string) {
 
-    if(newTaskTitle.trim().length === 0)
+    if(newTaskTitle.trim() === '')
     return;
 
     const tempTasks = tasks.map( task => ({...task}));
@@ -88,8 +88,9 @@ export function Home() {
     // ])
 
     //TODO - remove task from state
-   
-    setTasks((oldState) => oldState.filter((task) => task.id !== id));
+
+    setTasks((oldState) => oldState.filter((task) => task.id !== id))
+    
   }
 
   return (

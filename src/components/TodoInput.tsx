@@ -13,6 +13,8 @@ export function TodoInput({ addTask }: TodoInputProps) {
     //TODO - Call addTask if task not empty and clean input value 
     let value:string;
     value = task;
+    if(value.trim() === '')
+    return ;
     addTask(value);
     setTask('');
   }
